@@ -44,9 +44,9 @@ f:18ca35ff7a1f9efd15cc4c8b7634c579:wpa_supplicant/Pkgfile
 f:a804f8c2828b929446a928d02be98018:wpa_supplicant/wlan
 f:6fec70b14f238ad94caf5dac367ee427:pkgconf/README
 f:831f8a6e42441c8d76271655ce276c1e:pkgconf/aarch64-unknown-linux-gnu.personality
-f:723e7dd6da3be97a11be0829ca62cb49:pkgconf/.signature
-f:3111e8e5893f27a69499808413911008:pkgconf/.footprint
-f:9ac9b930ede309af621c65a2c6831b1b:pkgconf/Pkgfile
+f:3258555557394982ae0464ea89a787d9:pkgconf/.signature
+f:285f4bf1682fec8bd0dde93bba8ec79e:pkgconf/.footprint
+f:1c4779ac138dcc0ed2b4529f9bdffb14:pkgconf/Pkgfile
 f:3aae61a6f51f287cd8873bc58fcde500:db/db-5.3.21-memp_stat-upstream-fix.patch
 f:b886af5bc256d3a56d9be8f998f641b4:db/db-5.3.21-mutex_leak.patch
 f:bf37166683ba4966059cda949d4f6dbd:db/0001-atomic-Rename-local-__atomic_compare_exchange-to-avo.patch
