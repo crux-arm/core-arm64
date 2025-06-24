@@ -22,9 +22,9 @@ f:6683276d5930b0d3ae89cfa1fbd00a0d:openssl/.signature
 f:324b55fab9926f85eb9260bcf9d0c977:openssl/.footprint
 f:91f85842d2118003ee465c34259047e6:openssl/mksslcert.sh
 f:ff4642219f92e7f6fd36cea9b2ae05f5:openssl/Pkgfile
-f:9ae9f627b19ea28308b2f25b2e363477:util-linux/.signature
-f:90591895ec34d7666a69ba370e918410:util-linux/.footprint
-f:7778785438008f21cedba0a6a5e96190:util-linux/Pkgfile
+f:f96dd296164d0ee49c1ec92fddfb2627:util-linux/.signature
+f:0a54f6252edb58f98f064887a59e0904:util-linux/.footprint
+f:a38f52663e301c7a3251637f060f9675:util-linux/Pkgfile
 f:dd44eeb6b7d12824ac0eb56e95713a59:gcc/gcc-aarch64-dirs.patch
 f:89703cc679f412f031f91f3aba4c2a0d:gcc/.signature
 f:7c9128522053af79791bcfdd55834c2a:gcc/gcc-nocheck-fixincludes.patch
