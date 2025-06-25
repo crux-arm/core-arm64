@@ -22,6 +22,7 @@ f:6683276d5930b0d3ae89cfa1fbd00a0d:openssl/.signature
 f:324b55fab9926f85eb9260bcf9d0c977:openssl/.footprint
 f:91f85842d2118003ee465c34259047e6:openssl/mksslcert.sh
 f:ff4642219f92e7f6fd36cea9b2ae05f5:openssl/Pkgfile
+f:365cbfc7bddfbbe6aa13ec1a0cfa7f52:util-linux/meson.diff
 f:f96dd296164d0ee49c1ec92fddfb2627:util-linux/.signature
 f:0a54f6252edb58f98f064887a59e0904:util-linux/.footprint
 f:a38f52663e301c7a3251637f060f9675:util-linux/Pkgfile
