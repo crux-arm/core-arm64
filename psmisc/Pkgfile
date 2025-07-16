@@ -12,6 +12,7 @@ source=(https://gitlab.com/psmisc/psmisc/-/archive/v$version/$name-$version.tar.
 build() {
   cd $name-v$version-*
 
+  ./autogen.sh
   ./configure --prefix=/usr --disable-nls
   make
   make DESTDIR=$PKG install
