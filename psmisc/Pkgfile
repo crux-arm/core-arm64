@@ -10,7 +10,7 @@ release=1
 source=(https://gitlab.com/psmisc/psmisc/-/archive/v$version/$name-$version.tar.bz2)
 
 build() {
-  cd $name-$version
+  cd $name-v$version-*
 
   ./configure --prefix=/usr --disable-nls
   make
