@@ -7,11 +7,12 @@
 name=psmisc
 version=23.5
 release=1
-source=(http://downloads.sourceforge.net/project/$name/$name/$name-$version.tar.xz)
+source=(https://gitlab.com/psmisc/psmisc/-/archive/v$version/$name-$version.tar.bz2)
 
 build() {
-  cd $name-$version
+  cd $name-v$version-*
   export LINGUAS=' '
+  ./autogen.sh
   ./configure --prefix=/usr --disable-nls
   make
   make DESTDIR=$PKG install
