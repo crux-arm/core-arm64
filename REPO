@@ -41,8 +41,8 @@ f:e6d37048fd3de20cdd1d623eb0faa602:kbd/.footprint
 f:498bb149c96c4a935743015bed7c3393:kbd/Pkgfile
 f:0052a9ed82f89bc0bca90901f8c7a6c3:kbd/.signature
 f:3676fa07d39385398a87c15dd9034453:libgmp/.footprint
-f:09c27561b0cac4965c05e84e7864af26:libgmp/Pkgfile
-f:7050d84e4e92eef06f7a22b82b4efe97:libgmp/.signature
+f:ced27ce33ac91b3af65209414744a3f2:libgmp/Pkgfile
+f:6585ec48923e0e18763379fc981e7f5f:libgmp/.signature
 f:353ca6413716aa9fd68049efb68571ab:sysfsutils/.footprint
 f:e79e5effa552077b9f10dc3b17513b64:sysfsutils/Pkgfile
 f:839df50fb866499922790a36a2a2b138:sysfsutils/.signature
