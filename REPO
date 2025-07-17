@@ -67,8 +67,8 @@ f:4faaa4e1ba24038f8638a0cae5046cfb:filesystem/securetty
 f:dc4ff0c96d8dcd2141febc8b766e9a6b:filesystem/shells
 f:f05649d0184df6b4550efa3c513dde0e:filesystem/group
 f:301dd94576fb3a08fde2b7cbec7469eb:psmisc/.footprint
-f:b7f131de14e7ffae36ea9320a117de80:psmisc/Pkgfile
-f:96be0a48d87f747b4496e142d26c0312:psmisc/.signature
+f:cea4d34128b8039d007e01881b11b87a:psmisc/Pkgfile
+f:fae2bbf83c218ffec26fe9604957ac0a:psmisc/.signature
 f:034680aa69ee64596517784fe1161c1b:db/.footprint
 f:bf37166683ba4966059cda949d4f6dbd:db/0001-atomic-Rename-local-__atomic_compare_exchange-to-avo.patch
 f:6d264be5f78e7c141a23f6ae0dc14ec6:db/Pkgfile
