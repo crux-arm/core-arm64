@@ -10,7 +10,7 @@ source=(http://download.oracle.com/berkeley-db/$name-$version.tar.gz)
 build() {
   cd $name-$version/build_unix
   ../dist/configure --prefix=/usr \
-                    --build=arm-unknown-linux-gnu \
+                    --build=aarch64-unknown-linux-gnu \
                     --enable-compat185 \
                     --enable-shared \
                     --enable-static \
