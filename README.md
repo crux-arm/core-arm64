@@ -4,7 +4,7 @@ CRUX-ARM aarch64 ports overlay for CRUX core collection
 
 To use these ports, download the `core-arm64.rsync` file to `/etc/ports`:
 ```
-$ sudo wget -P /etc/ports https://git.crux.nu/crux-arm/xorg-arm/src/branch/3.8/xorg-arm.rsync
+$ sudo wget -P /etc/ports https://git.crux.nu/crux-arm/core-arm64/src/branch/3.8/core-arm64.rsync
 $ sudo ports -u core-arm64
 ```
 
