@@ -72,7 +72,7 @@ build() {
     cat > $PKG/usr/bin/crux << EOF
 #!/bin/sh
 
-echo "CRUX-ARM64 version $version"
+echo "CRUX-ARM arm64 version $version"
 
 # End of file
 EOF
@@ -83,7 +83,7 @@ EOF
 NAME=CRUX-ARM64
 VERSION_ID="$version"
 ID=crux
-PRETTY_NAME="CRUX-ARM64"
+PRETTY_NAME="CRUX-ARM arm64"
 HOME_URL="https://crux-arm.nu"
 BUG_REPORT_URL="https://crux-arm.nu/bugs"
 DOCUMENTATION_URL="https://crux-arm.nu/Main/Documentation"
