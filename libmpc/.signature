@@ -1,5 +1,0 @@
-untrusted comment: verify with /etc/ports/core-arm64.pub
-RWSKslkvIwb+2dUzglVri2BDs/32Ptn91Ky29J4YWJvqxOI9xgHfd2rgz3oetEnRaAvDOqDTcqKI4Pf7nj1Rr/tRbzN0Fbn1cQM=
-SHA256 (Pkgfile) = af49c90885ec6c6ef955bee894a9f80e733410072b45324e7f06e6389be28fef
-SHA256 (.footprint) = cc135bd44c298d12597b7dc288a39cf076f19d0fec9ed0e49de980b59b797fee
-SHA256 (mpc-1.4.0.tar.xz) = 3210b3a546b1cb00c296ca360891d7740ee6ff06deb02a27a35b20cd3c0bb1a5
