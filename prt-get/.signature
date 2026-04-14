@@ -1,7 +1,7 @@
 untrusted comment: verify with /etc/ports/core-arm64.pub
-RWSKslkvIwb+2Y/H0BWZ+sVFvJxbfGGrGwYxI/h7YwJ9Q51TR9oBfXjDEf5MnsR6/IQrrx3bmqklH7gW94dUj+yUnrisxqUb7Q8=
-SHA256 (Pkgfile) = dc0ba10a17ecdf819b233ae626665559ba353a61581c085d8c94ab9691726a57
+RWSKslkvIwb+2b/UG1z4vZOWC66OG5v8qgVRwh61UL3cbPXDg/YX69OiNkfSBtPDsBUt6DOEjbHVw/0qgM3PV7gagZ2036FMEgE=
+SHA256 (Pkgfile) = 6e31d379f0119cc352af689036cfe42235c2e9806c30d9d663d32acc60646521
 SHA256 (.footprint) = 26802764ae3ae1e1a73ea56c859b3415e250a72ea444af410381df8c8f5d3ac8
-SHA256 (prt-get-5.19.6.tar.xz) = 6ea89df308e19a6239f260c91036805cd2063d0cd24a7427235849634dd49f0d
+SHA256 (prt-get-5.19.9.tar.xz) = fddce0ba4b8ebee1dc283eb0fdbfcc3d684f5876897e16a59c6d3d93d6cddee1
 SHA256 (prt-get.conf) = cba48c99b5b91dd19e0b2738a9cdc081ef63bdd917891085f1fb116a9496e4f3
 SHA256 (prt-get.aliases) = 2603ea52a4dd4263898b2ca5219b19963e84714c990c5fa80dcc0a82d2dd65e5
