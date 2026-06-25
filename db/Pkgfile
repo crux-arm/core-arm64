@@ -26,7 +26,7 @@ build() {
 
     cd build_unix
 
-    CFLAGS="$CFLAGS -Wno-error=implicit-int" \
+    CFLAGS+=" -Wno-error=implicit-int -std=gnu17" \
     ../dist/configure --prefix=/usr \
         --build=aarch64-unknown-linux-gnu \
         --enable-compat185 \
