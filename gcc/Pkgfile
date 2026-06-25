@@ -1,10 +1,11 @@
 # Description: The GNU Compiler Collection
 # URL: https://gcc.gnu.org
 # Maintainer: CRUX System Team, core-ports at crux dot nu
+# Arch Maintainer: CRUX-ARM System Team, devel at crux-arm dot nu
 # Depends on: libmpc zstd
 
 name=gcc
-version=14.3.0
+version=16.1.0
 release=1
 source=(https://sourceware.org/pub/gcc/releases/gcc-$version/$name-$version.tar.xz
     $name-nocheck-fixincludes.patch $name-aarch64-dirs.patch)
@@ -24,7 +25,7 @@ build() {
         --prefix=/usr \
         --libexecdir=/usr/lib \
         --enable-threads=posix \
-        --with-build-config=bootstrap-lto \
+        --with-build-config=bootstrap-lto-lean \
         --with-linker-hash-style=gnu \
         --with-system-zlib \
         --enable-languages=c,c++,lto \
@@ -46,11 +47,7 @@ build() {
         --disable-fixincludes \
         --disable-nls
 
-    make -O STAGE1_CFLAGS="-O2" \
-        BOOT_CFLAGS="$CFLAGS" \
-        BOOT_LDFLAGS="$LDFLAGS" \
-        LDFLAGS_FOR_TARGET="$LDFLAGS" \
-        bootstrap
+    make -O bootstrap
     make -j1 DESTDIR=$PKG install
 
     install -d $PKG/lib
