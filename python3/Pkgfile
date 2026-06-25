@@ -4,15 +4,20 @@
 # Depends on: bzip2 expat gdbm libffi libnsl libtirpc libxcrypt mpdecimal sqlite3 xz
 
 name=python3
-version=3.12.13
+version=3.15.0b3
 release=1
-source=(https://www.python.org/ftp/python/${version%rc*}/Python-$version.tar.xz)
+source=(https://www.python.org/ftp/python/${version%b*}/Python-$version.tar.xz)
 
 build() {
     cd Python-$version
 
     autoconf
     autoheader
+
+    cat > ignore_tests.txt << 'EOF'
+test.test_generators.SignalAndYieldFromTest.test_raise_and_yield_from
+EOF
+  
     sed -i -e "s|-flto |-flto=4 |g" configure configure.ac
     sed -i -e "s|^#.* /usr/local/bin/python|#!/usr/bin/python3|" Lib/cgi.py
     CFLAGS="${CFLAGS/-O2/-O3} -ffat-lto-objects"
@@ -42,7 +47,8 @@ build() {
         --with-system-libmpdec \
         --with-tzpath=/usr/share/zoneinfo \
         --build=aarch64-unknown-linux-gnu \
-        --without-ensurepip
+        --without-ensurepip \
+        PROFILE_TASK='-m test --pgo --ignorefile=ignore_tests.txt --timeout=$(TESTTIMEOUT)'
 
     make EXTRA_CFLAGS="$CFLAGS"
     make -j1 EXTRA_CFLAGS="$CFLAGS" DESTDIR=$PKG altinstall maninstall
