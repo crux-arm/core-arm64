@@ -5,14 +5,14 @@
 # Depends on:
 
 name=glibc
-version=2.40
-release=3
-_kernel_version=6.6.119
+version=2.43
+release=1
+_kernel_version=6.18.34
 
 source=(https://ftp.gnu.org/gnu/glibc/glibc-$version.tar.xz
     https://www.kernel.org/pub/linux/kernel/v6.x/linux-$_kernel_version.tar.xz
-    glibc-$version-2.patch
-    glibc-2.39-fhs-1.patch
+    glibc-2.43-upstream-fixes-1.patch
+    glibc-fhs-1.patch
     hosts resolv.conf nsswitch.conf host.conf ld.so.conf
     locale-gen locale.gen.in)
 
@@ -22,8 +22,8 @@ build() {
     make -C $SRC/linux-$_kernel_version INSTALL_HDR_PATH=$PKG/usr headers_install
     chown root:root $PKG/usr
 
-    patch -p1 -d $SRC/$name-${version:0:4} -i $SRC/$name-$version-2.patch
-    patch -p1 -d $SRC/$name-${version:0:4} -i $SRC/glibc-2.39-fhs-1.patch
+    patch -p1 -d $SRC/$name-${version:0:4} -i $SRC/glibc-2.43-upstream-fixes-1.patch
+    patch -p1 -d $SRC/$name-${version:0:4} -i $SRC/glibc-fhs-1.patch
 
     mkdir $SRC/build
     cd $SRC/build
@@ -36,9 +36,12 @@ build() {
         --libexecdir=/usr/lib \
         --with-headers=$PKG/usr/include \
         --enable-kernel=3.7.0 \
+        --enable-addons \
         --enable-stack-protector=strong \
+        --enable-static-pie \
         --enable-bind-now \
         --disable-multi-arch \
+        --enable-sframe \
         --disable-profile \
         --disable-werror \
         --without-gd
