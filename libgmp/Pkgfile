@@ -7,10 +7,14 @@
 name=libgmp
 version=6.3.0
 release=1
-source=(https://gmplib.org/download/gmp/gmp-$version.tar.xz)
+source=(https://gmplib.org/download/gmp/gmp-$version.tar.xz
+        gcc15.patch)
 
 build() {
     cd gmp-$version
+
+    patch -Np1 -i $SRC/gcc15.patch
+    autoreconf -fvi
 
     ./configure \
         --prefix=/usr \
