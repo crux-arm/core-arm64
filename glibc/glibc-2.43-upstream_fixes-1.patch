@@ -652,7 +652,7 @@ index 4f41f22c12..8df66ea048 100644
 +	{								      \
 +	  uint32_t ch = data->__statep->__count >> 7;			      \
 +	  if (__glibc_unlikely (ch != 0))				      \
-+	    {							      \
++	    {								      \
 +	      if (__glibc_unlikely (outend - outbuf < 4))		      \
 +		status = __GCONV_FULL_OUTPUT;				      \
 +	      else							      \
@@ -688,7 +688,7 @@ index 4f41f22c12..8df66ea048 100644
  
 @@ -119,21 +138,29 @@ enum
        }									      \
-    else								      \
+     else								      \
        {									      \
 -	/* This is a combined character.  Make sure we have room.  */	      \
 -	if (__glibc_unlikely (outptr + 8 > outend))			      \
@@ -1099,7 +1099,7 @@ index 5e496caf2f..0c5ebed33a 100644
 From ef4e01da564df1520dfa0d92ef4eb5f473538ef1 Mon Sep 17 00:00:00 2001
 From: Michael Jeanson <mjeanson@efficios.com>
 Date: Fri, 20 Feb 2026 11:01:00 -0500
-Subject: [PATCH 68] tests: fix tst-rseq with Linux 7.0
+Subject: [PATCH 6/8] tests: fix tst-rseq with Linux 7.0
 
 A sub-test of tst-rseq is to validate the return code and errno of the
 rseq syscall when attempting to register the exact same rseq area as was
@@ -1192,7 +1192,7 @@ index 210944837e..0c0085e607 100644
 @@ -564,6 +565,9 @@ tst-printf-bz18872-ENV = MALLOC_TRACE=$(objpfx)tst-printf-bz18872.mtrace \
  tst-vfprintf-width-prec-ENV = \
    MALLOC_TRACE=$(objpfx)tst-vfprintf-width-prec.mtrace \
-   LD_PRELOAD=$(common-objpfx)/malloc/lic_malloc_debug.so
+   LD_PRELOAD=$(common-objpfx)/malloc/libc_malloc_debug.so
 +tst-vfscanf-bz34008-ENV = \
 +  MALLOC_CHECK_=3 \
 +  LD_PRELOAD=$(common-objpfx)/malloc/libc_malloc_debug.so
@@ -1366,7 +1366,7 @@ index 0000000000..cc4067da99
 +
 +  FILE *fp = xfopen (filename, "r+");
 +  TEST_COMPARE (getwc (fp), L'A');
-+  /* If the bug is fixed, then ungtwc should not touch byte stream.
++  /* If the bug is fixed, then ungetwc should not touch byte stream.
 +     If the bug is not fixed, ungetwc firstly match last read char, L'A',
 +     failed, then the pbackfail branch, matching last read char in byte
 +     stream, that is, '\0' (initialized when setup wide stream). */
@@ -1398,5 +1398,4 @@ index 7a8466ea44..7c47459828 100644
        /* Need to handle a filebuf in write mode (switch to read mode). FIXME!*/
 -- 
 2.54.0
-
 
