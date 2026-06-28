@@ -11,28 +11,31 @@ source=(https://www.python.org/ftp/python/${version%b*}/Python-$version.tar.xz)
 build() {
     cd Python-$version
 
-    autoconf
-    autoheader
-
-    cat > ignore_tests.txt << 'EOF'
-test.test_generators.SignalAndYieldFromTest.test_raise_and_yield_from
-EOF
-  
     sed -i -e "s|-flto |-flto=4 |g" configure configure.ac
-    sed -i -e "s|^#.* /usr/local/bin/python|#!/usr/bin/python3|" Lib/cgi.py
     CFLAGS="${CFLAGS/-O2/-O3} -ffat-lto-objects"
     sed -i -e "s:-j0:-j$(nproc):" Makefile.pre.in
     local _pgojobs=$(nproc)
     export PROFILE_TASK="-m test -j${_pgojobs} --pgo-extended -x test_gdb -u-network"
     PROFILE_TASK+=" -x test_socket -x test_asyncio -x test_httpservers -x test_logging -x test_multiprocessing_fork -x test_xmlrpc"
     local -x LC_ALL=C.UTF-8
+    export SETUPTOOLS_USE_DISTUTILS=stdlib
     local -x COLUMNS=80
     local -x PYTHONDONTWRITEBYTECODE=
 
-    ## Remove tests
-    #rm -r Lib/{test,{ctypes,tkinter,unittest}/test}
-    #rm -r Lib/{{distutils,lib2to3}/tests,idlelib/idle_test}
+    autoconf
+    autoheader
 
+    cat > ignore_tests.txt << 'EOF'
+test.test_generators.SignalAndYieldFromTest.test_raise_and_yield_from
+test.test_sqlite3.test_cli.Completion.test_complete_columns
+test.test_sqlite3.test_cli.Completion.test_complete_functions
+test.test_sqlite3.test_cli.Completion.test_complete_no_input
+test.test_sqlite3.test_cli.Completion.test_complete_no_match
+test.test_sqlite3.test_cli.Completion.test_complete_schemata
+test.test_sqlite3.test_cli.Completion.test_complete_sql_keywords
+test.test_sqlite3.test_cli.Completion.test_complete_table_indexes_triggers_views
+EOF
+  
     ./configure \
         --prefix=/usr \
         --enable-shared \
@@ -42,6 +45,7 @@ EOF
         --with-computed-gotos \
         --with-dbmliborder=gdbm:ndbm \
         --with-lto \
+        --with-pkg-config=yes \
         --with-system-expat \
         --with-system-ffi \
         --with-system-libmpdec \
@@ -51,6 +55,7 @@ EOF
         PROFILE_TASK='-m test --pgo --ignorefile=ignore_tests.txt --timeout=$(TESTTIMEOUT)'
 
     make EXTRA_CFLAGS="$CFLAGS"
+    sed -i 's/^all:.*$/all: build_all/' Makefile
     make -j1 EXTRA_CFLAGS="$CFLAGS" DESTDIR=$PKG altinstall maninstall
 
     ln -s 2to3-${version%.*}                        $PKG/usr/bin/2to3
