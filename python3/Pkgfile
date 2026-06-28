@@ -34,6 +34,7 @@ test.test_sqlite3.test_cli.Completion.test_complete_no_match
 test.test_sqlite3.test_cli.Completion.test_complete_schemata
 test.test_sqlite3.test_cli.Completion.test_complete_sql_keywords
 test.test_sqlite3.test_cli.Completion.test_complete_table_indexes_triggers_views
+test.test_sqlite3.test_dbapi.MultiprocessTests.test_ctx_mgr_rollback_if_commit_failed
 EOF
   
     ./configure \
