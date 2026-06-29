@@ -48,7 +48,6 @@ EOF
         --with-lto \
         --with-pkg-config=yes \
         --with-system-expat \
-        --with-system-ffi \
         --with-system-libmpdec \
         --with-tzpath=/usr/share/zoneinfo \
         --build=aarch64-unknown-linux-gnu \
@@ -57,7 +56,7 @@ EOF
 
     make EXTRA_CFLAGS="$CFLAGS"
     sed -i 's/^all:.*$/all: build_all/' Makefile
-    make -j1 EXTRA_CFLAGS="$CFLAGS" DESTDIR=$PKG altinstall maninstall
+    make -j1 EXTRA_CFLAGS="$CFLAGS" DESTDIR=$PKG TEST_MODULES=no altinstall maninstall
 
     ln -s 2to3-${version%.*}                        $PKG/usr/bin/2to3
     ln -s python${version%.*}                     $PKG/usr/bin/python3
