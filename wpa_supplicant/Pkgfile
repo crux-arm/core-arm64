@@ -11,11 +11,12 @@ source=(https://w1.fi/releases/$name-$version.tar.gz
     wpa_supplicant wlan ${name}-${version}-openssl_4_fixes-1.patch)
 
 build() {
-    cd $name-$version/$name
+    cd $name-$version/
 
     # Openssl 4,0 patch
     patch -Np1 -i ${SRC}/${name}-${version}-openssl_4_fixes-1.patch
 
+    cd $name
     cp defconfig .config
     echo "CONFIG_READLINE=y
         CONFIG_LIBNL32=y
