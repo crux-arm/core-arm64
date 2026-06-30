@@ -8,10 +8,13 @@ name=wpa_supplicant
 version=2.11
 release=1
 source=(https://w1.fi/releases/$name-$version.tar.gz
-    wpa_supplicant wlan)
+    wpa_supplicant wlan ${name}-${version}-openssl_4_fixes-1.patch)
 
 build() {
     cd $name-$version/$name
+
+    # Openssl 4,0 patch
+    patch -Np1 -i ${SRC}/${name}-${version}-openssl_4_fixes-1.patch
 
     cp defconfig .config
     echo "CONFIG_READLINE=y
