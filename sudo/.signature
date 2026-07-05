@@ -1,0 +1,7 @@
+untrusted comment: verify with /etc/ports/core-arm64.pub
+RWSKslkvIwb+2aVS82m/XYTHe9b6FmPNBb5UqQkwZmoBJ0KDVw1Ba+slUua9MXcLbhfjfhpdvqzuwuaMlYowQgypfgkvToLjwwQ=
+SHA256 (Pkgfile) = eb19d1381361287d812ab9dca8b284ae93579949a49e31b448974adca865ba22
+SHA256 (.footprint) = 5d9d7932c3f618220ae5e35cc5d5b200dcac584e692e02b896dfec8c7104186f
+SHA256 (sudo-1.9.17p2.tar.gz) = 4a38a1ab3adb1199257edc2a7c4a2bd714665eb605b04368843b06dada2cfcfb
+SHA256 (openssl.patch) = 314bb384886ec8635f3d3a9fd8b7a4a276b77915d84f864c38bdf44c806325ca
+SHA256 (sudo.pam) = d56499ea47e4c654032b278923ebee0caba4ca5b0fd242ea9c47204afc8a09e1
