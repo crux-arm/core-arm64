@@ -1,0 +1,6 @@
+untrusted comment: verify with /etc/ports/core-arm64.pub
+RWSKslkvIwb+2d+U62zvUCD8lK1e6rJi/z/YwiPZx0O+RpfO0a8LFB9r6zZHQLF76XgFubxtYdgEUvTh52JerFp7fa44KI+ghAs=
+SHA256 (Pkgfile) = 59ad69e1c3f94b36e1de96ebbbfb71acc8856d5a9d510789699ca5933f3d7cdd
+SHA256 (.footprint) = 485a9624fada51342b9a6245843f22eec921bdf36b3f8bb205236a0d11340124
+SHA256 (gzip-1.15.tar.xz) = 9aa0cc780dec156b8282844833b342ab7cb08c25d2cd9a1869cdd0df31deff48
+SHA256 (gzip-1.15-aarch64_wrong_include.diff) = 5039cad7b072903aab1038372cf1658b7d594f8fad67f886de86e452998b56cd
