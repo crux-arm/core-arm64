@@ -1,8 +1,8 @@
 untrusted comment: verify with /etc/ports/core-arm64.pub
-RWSKslkvIwb+2Ul9xWZkDbneXFR1lOj6+sWQ7GzPRISqYH2ZWOJwqrNy8qALZqe4xRVBd71P3SSwOpn1o4ROGS0pq/xnNVktWQY=
-SHA256 (Pkgfile) = f99d9ba190650cc9afc0da4b33ad885680dca0a94706d1a4a6c4aca0d79aaf23
+RWSKslkvIwb+2ei753cjHs8jLc0SSju+VRZ0yHwL2gonh37C8urUNWp5pWpCqONWtdP8KZoS1dwBh8iF0HpqycH5/6ZA2XhXSQY=
+SHA256 (Pkgfile) = 44b509b8589ff1788a6ab7018b42cb63edbe1ea13ade51edd88d0407233eeaa7
 SHA256 (.footprint) = 458b2fb1f74ff6f41fddcdb2c45d2997ceb9181105bde7e8e2e341ebb58fbb4e
-SHA256 (ports-1.6.tar.gz) = 8b2ba48e7440f4a71fa1c9c480a1212ce87c623e1d33121eb660829ba294ca94
+SHA256 (ports-1.7.tar.gz) = 3e35e79a715a4c2b5822561b56f46bcce23cd786a9d34d2a833e7bd626cc71ff
 SHA256 (core.pub) = 5a08b7f21fb1768b9e639da0b768edb536de0590b75e663dab6d185617613791
 SHA256 (opt.pub) = 4711f488546c38cdec792c1f16b3bf7c4db0c7dc0c3cdab0ecdd85e2c7247ae5
 SHA256 (xorg.pub) = 5db27d455f658ea8a6c7ae9aac601d66e74cedff5dd497910fd1ffead08e5237
